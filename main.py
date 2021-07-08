@@ -9,7 +9,7 @@ class Personagem(metaclass=ABCMeta):
         self.altura = altura
         self.peso = peso
         self.genero = genero
-        self.classe = classe
+        self.classe = classe.title().strip()
         self.vida = ""
         self.atributos_base = {
             'força': 0,
@@ -24,13 +24,37 @@ class Personagem(metaclass=ABCMeta):
 
 
     def set_classe(self):
-        
+ # Pretendo mudar e transformar cada classe em um objeto separado
+ # Mas deixa isso pra outra hora.
         if self.classe == 'Cavaleiro Andante':
             self.atributos_base['força'] = 3
             self.atributos_base['destreza'] = 2
             self.atributos_base['resistencia'] = 2
             self.atributos_base['carisma'] = 2
-            
+        elif self.classe == 'Cavaleiro':
+            self.atributos_base['força'] = 2
+            self.atributos_base['destreza'] = 1
+            self.atributos_base['inteligencia'] = 1
+            self.atributos_base['resistencia'] = 3
+            self.atributos_base['carisma'] = 3
+        elif self.classe == 'Alquimista':
+            self.atributos_base['destreza'] = 1
+            self.atributos_base['inteligencia'] = 3
+            self.atributos_base['sabedoria'] = 2
+            self.atributos_base['resistencia'] = 1
+            self.atributos_base['carisma'] = 3
+        elif self.classe == 'Bardo':
+            self.atributos_base['inteligencia'] = 1
+            self.atributos_base['sabedoria'] = 1
+            self.atributos_base['carisma'] = 5
+            self.atributos_base['sorte'] = 3
+        elif self.classe == 'Nobre':
+            self.atributos_base = {x: 1 for x in self.atributos_base}
+        elif self.classe == 'Oraculo':
+            self.atributos_base['inteligencia'] = 1
+            self.atributos_base['fe'] = 5
+            self.atributos_base['sabedoria'] = 3
+            self.atributos_base['resistencia'] = 1    
         return self.atributos_base
     
     def __str__(self):
@@ -44,9 +68,9 @@ class Personagem(metaclass=ABCMeta):
         Classe: {self.classe}
         ''')
 
-persona = Personagem('Jorge', 41, 1.90, '71 kg', 'Masculino', 'Cavaleiro Andante')
+persona = Personagem('Jorge', 41, 1.90, '71 kg', 'Masculino', 'oraculo')
 persona.set_classe()
 # print(persona.atributos_base)
 atributos = persona.atributos_base.items()
-for linha in atributos:
-    print(linha)
+for item, coiso in atributos:
+    print(item, coiso)
