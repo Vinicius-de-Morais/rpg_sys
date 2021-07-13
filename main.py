@@ -1,16 +1,13 @@
-from abc import ABCMeta
 
-
-class Personagem(metaclass=ABCMeta):
+class Personagem():
     def __init__(self, nome, idade, altura, peso, genero, classe):
         self.nome = nome.title()
-        self.raca = ""
+        self.raca = "Desconhecida"
         self.idade = idade
         self.altura = altura
         self.peso = peso
         self.genero = genero
         self.classe = classe.title().strip()
-        self.vida = ""
         self.atributos_base = {
             'força': 0,
             'destreza': 0,
@@ -57,8 +54,20 @@ class Personagem(metaclass=ABCMeta):
             self.atributos_base['resistencia'] = 1    
         return self.atributos_base
     
+    @property
+    def atributos(self):
+        atributos = self.atributos_base.items()
+        for item, coiso in atributos:
+            print(item, coiso)
+
+    def upa_lv (self):
+        pass
+
     def __str__(self):
-        print(f''' 
+        atributos = self.atributos_base.items()
+        for item, coiso in atributos:
+            print(item, coiso)
+        return f''' 
         Nome: {self.nome}
         Raça: {self.raca}
         Idade: {self.idade}
@@ -66,11 +75,4 @@ class Personagem(metaclass=ABCMeta):
         Peso: {self.peso}
         Genero: {self.genero}
         Classe: {self.classe}
-        ''')
-
-persona = Personagem('Jorge', 41, 1.90, '71 kg', 'Masculino', 'oraculo')
-persona.set_classe()
-# print(persona.atributos_base)
-atributos = persona.atributos_base.items()
-for item, coiso in atributos:
-    print(item, coiso)
+        '''
