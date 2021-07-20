@@ -1,5 +1,5 @@
 
-class Personagem():
+class Personagem:
     def __init__(self, nome, idade, altura, peso, genero,):
         self.nome = nome.title()
         self.raca = "Desconhecida"
@@ -24,17 +24,18 @@ class Personagem():
         for item, coiso in atributos:
             print(item, coiso)
 
-    def upa_lv (self):
-        pass
+    def sobe_um_level(self, atributo):
+        self.atributos_base[atributo] += 1
 
     def __str__(self):
-        return f''' 
+        personagem = f''' 
 Nome: {self.nome}
 Raça: {self.raca}
 Idade: {self.idade}
 Altura: {self.altura}
 Peso: {self.peso}
 Genero: {self.genero}'''
+        return personagem
 
 
 class CavaleiroAndante(Personagem):
@@ -44,6 +45,8 @@ class CavaleiroAndante(Personagem):
         self.atributos_base['destreza'] = 2
         self.atributos_base['resistencia'] = 2
         self.atributos_base['carisma'] = 2
+
+
 class Cavaleiro(Personagem):
     def __init__(self, nome, idade, altura, peso, genero):
         super().__init__(nome, idade, altura, peso, genero)
@@ -52,6 +55,8 @@ class Cavaleiro(Personagem):
         self.atributos_base['inteligencia'] = 1
         self.atributos_base['resistencia'] = 3
         self.atributos_base['carisma'] = 3
+
+
 class Alquimista(Personagem):
     def __init__(self, nome, idade, altura, peso, genero):
         super().__init__(nome, idade, altura, peso, genero)
@@ -60,6 +65,8 @@ class Alquimista(Personagem):
         self.atributos_base['sabedoria'] = 2
         self.atributos_base['resistencia'] = 1
         self.atributos_base['carisma'] = 3
+
+
 class Bardo(Personagem):
     def __init__(self, nome, idade, altura, peso, genero):
         super().__init__(nome, idade, altura, peso, genero)
@@ -67,14 +74,18 @@ class Bardo(Personagem):
         self.atributos_base['sabedoria'] = 1
         self.atributos_base['carisma'] = 5
         self.atributos_base['sorte'] = 3
+
+
 class Nobre(Personagem):
     def __init__(self, nome, idade, altura, peso, genero):
         super().__init__(nome, idade, altura, peso, genero)
         self.atributos_base = {x: 1 for x in self.atributos_base}
+
+
 class Oraculo(Personagem):
     def __init__(self, nome, idade, altura, peso, genero):
         super().__init__(nome, idade, altura, peso, genero)
         self.atributos_base['inteligencia'] = 1
         self.atributos_base['fe'] = 5
         self.atributos_base['sabedoria'] = 3
-        self.atributos_base['resistencia'] = 1    
+        self.atributos_base['resistencia'] = 1
