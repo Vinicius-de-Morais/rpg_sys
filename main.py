@@ -17,22 +17,6 @@ class Personagem():
             'carisma': 0,
             'sorte': 0
         }
-
-
-#     def set_classe(self):
-#  # Pretendo mudar e transformar cada classe em um objeto separado
-#  # Mas deixa isso pra outra hora
-#         if self.classe == 'Cavaleiro':
-
-#         elif self.classe == 'Alquimista':
-
-#         elif self.classe == 'Bardo':
-
-#         elif self.classe == 'Nobre':
-#             self.atributos_base = {x: 1 for x in self.atributos_base}
-#         elif self.classe == 'Oraculo':
-#
-#         return self.atributos_base
     
     @property
     def atributos(self):
