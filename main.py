@@ -1,22 +1,13 @@
-
+import json
 class Personagem:
-    def __init__(self, nome, idade, altura, peso, genero,):
+    def __init__(self, nome, idade, altura, peso, genero, classe):
         self.nome = nome.title()
         self.raca = "Desconhecida"
         self.idade = idade
         self.altura = altura
         self.peso = peso
         self.genero = genero
-        self.atributos_base = {
-            'força': 0,
-            'destreza': 0,
-            'inteligencia': 0,
-            'fe': 0,
-            'sabedoria': 0,
-            'resistencia': 0,
-            'carisma': 0,
-            'sorte': 0
-        }
+        self.atributos_base = self.define_classe(classe)
     
     @property
     def atributos(self):
@@ -37,55 +28,14 @@ Peso: {self.peso}
 Genero: {self.genero}'''
         return personagem
 
-
-class CavaleiroAndante(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero,):
-        super().__init__(nome, idade, altura, peso, genero, )
-        self.atributos_base['força'] = 3
-        self.atributos_base['destreza'] = 2
-        self.atributos_base['resistencia'] = 2
-        self.atributos_base['carisma'] = 2
-
-
-class Cavaleiro(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero):
-        super().__init__(nome, idade, altura, peso, genero)
-        self.atributos_base['força'] = 2
-        self.atributos_base['destreza'] = 1
-        self.atributos_base['inteligencia'] = 1
-        self.atributos_base['resistencia'] = 3
-        self.atributos_base['carisma'] = 3
-
-
-class Alquimista(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero):
-        super().__init__(nome, idade, altura, peso, genero)
-        self.atributos_base['destreza'] = 1
-        self.atributos_base['inteligencia'] = 3
-        self.atributos_base['sabedoria'] = 2
-        self.atributos_base['resistencia'] = 1
-        self.atributos_base['carisma'] = 3
-
-
-class Bardo(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero):
-        super().__init__(nome, idade, altura, peso, genero)
-        self.atributos_base['inteligencia'] = 1
-        self.atributos_base['sabedoria'] = 1
-        self.atributos_base['carisma'] = 5
-        self.atributos_base['sorte'] = 3
-
-
-class Nobre(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero):
-        super().__init__(nome, idade, altura, peso, genero)
-        self.atributos_base = {x: 1 for x in self.atributos_base}
-
-
-class Oraculo(Personagem):
-    def __init__(self, nome, idade, altura, peso, genero):
-        super().__init__(nome, idade, altura, peso, genero)
-        self.atributos_base['inteligencia'] = 1
-        self.atributos_base['fe'] = 5
-        self.atributos_base['sabedoria'] = 3
-        self.atributos_base['resistencia'] = 1
+    def define_classe(self, classe):
+        caminho = 'json.json'
+        with open(caminho, 'r', encoding='UTF-8') as arquivo:
+            x = json.load(arquivo)
+            for classes in range(len(x)):
+                if classe in x[classes]:
+                    index_classe = classes
+        classe_escolhida = x[index_classe].values()
+        for x in classe_escolhida:
+            self.atributos_base = x
+        return self.atributos_base

@@ -1,0 +1,72 @@
+[
+    {"NPC":{
+        "Força": 0,
+        "Destreza": 0,
+        "Inteligencia": 0,
+        "Fe": 0,
+        "Sabedoria": 0,
+        "Resistencia": 0,
+        "Carisma": 0,
+        "Sorte": 0 
+    }},
+    {"Cavaleiro Andante":{
+        "Força": 3,
+        "Destreza": 2,
+        "Inteligência": 0,
+        "Fé": 0,
+        "Sabedoria": 0,
+        "Resistência": 2,
+        "Carisma": 2,
+        "Sorte": 0
+    }},
+    {"Cavaleiro":{ 
+        "Força": 2,
+        "Destreza": 1,
+        "Inteligência": 1,
+        "Fé": 0,
+        "Sabedoria": 0,
+        "Resistência": 3,
+        "Carisma": 3,
+        "Sorte": 0
+    }},
+    {"Alquimista":{
+        "Força": 0,
+        "Destreza": 1,
+        "Inteligência": 3,
+        "Fé": 0,
+        "Sabedoria": 2,
+        "Resistência": 1,
+        "Carisma": 3,
+        "Sorte": 0
+    }},
+    {"Bardo":{
+        "Força": 0,
+        "Destreza": 0,
+        "Inteligência": 1,
+        "Fé": 0,
+        "Sabedoria": 1,
+        "Resistência": 0,
+        "Carisma": 5,
+        "Sorte": 3
+    }},
+    {"Nobre":{
+        "Força": 1,
+        "Destreza": 1,
+        "Inteligência": 1,
+        "Fé": 1,
+        "Sabedoria": 1,
+        "Resistência": 1,
+        "Carisma": 1,
+        "Sorte": 1
+    }},
+    {"Oráculo":{
+        "Força": 0,
+        "Destreza": 0,
+        "Inteligência": 1,
+        "Fé": 5,
+        "Sabedoria": 3,
+        "Resistência": 1,
+        "Carisma": 0,
+        "Sorte": 0
+    }}
+]
