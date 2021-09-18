@@ -1,0 +1,17 @@
+******************* 
+Nome: Jorge
+Raça: Desconhecida
+Idade: 41
+Altura: 1.9
+Peso: 71 kg
+Genero: Masculino
+*******************
+Força: 6
+Destreza: 2
+Inteligência: 0
+Fé: 0
+Sabedoria: 0
+Resistência: 2
+Carisma: 2
+Sorte: 0 
+*******************

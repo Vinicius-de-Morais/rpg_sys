@@ -9,7 +9,7 @@ class Personagem:
         self.peso = peso
         self.genero = genero
         self._atributos = self.define_classe(classe)
-        self.poder_de_raca = #DEFINIR DEPOIS
+        # self.poder_de_raca = #DEFINIR DEPOIS
     
     @property
     def atributos(self):
@@ -47,3 +47,12 @@ Genero: {self.genero}'''
         for atributo in classe_escolhida:
             self._atributos = atributo
         return self._atributos
+
+    def salva_ficha(self):
+        caminho = f'{self._nome}.txt'
+        with open(caminho, 'w', encoding='UTF-8') as arquivo:
+            arquivo.write('*******************')
+            arquivo.write(self.__str__())
+            arquivo.write('\n*******************\n')
+            arquivo.write(self.atributos)
+            arquivo.write('\n*******************')
