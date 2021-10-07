@@ -1,5 +1,6 @@
 ******************* 
 Nome: Jorge
+Classe: Cavaleiro Andante
 Raça: Desconhecida
 Idade: 41
 Altura: 1.9

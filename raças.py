@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 class Mascara:
     __metaclass__ = ABCMeta
 
