@@ -1,17 +1,20 @@
 import json
+from raças import DefineRaca
+from verificadores import RealizaVerificacao
 
 class Personagem:
-    def __init__(self, nome, idade, altura, peso, genero, classe):
-        self._nome = nome.title()
-        self._classe = classe.title()
-        self._raca = "Desconhecida"
-        self._idade = idade
-        self.altura = altura
-        self.peso = peso
-        self.genero = genero
-        self._atributos = Atributos().define_atributos(classe)
-        # self.poder_de_raca = #DEFINIR DEPOIS
-    
+    def __init__(self, nome, raca, idade, altura, peso, genero, classe):
+        if RealizaVerificacao(raca, altura):
+            self._nome = nome.title()
+            self._classe = classe.title()
+            self._idade = idade
+            self.altura = altura
+            self.peso = peso
+            self.genero = genero
+            self._atributos = Atributos().define_atributos(classe)
+            self.poder_de_raca = None
+            self._raca = DefineRaca(raca).define(self)
+
     @property
     def atributos(self):
         atributos = f'''Força: {self._atributos["Força"]}
@@ -30,12 +33,14 @@ Sorte: {self._atributos["Sorte"]} '''
     def __str__(self):
         personagem = f''' 
 Nome: {self._nome}
-Classe: {self._classe}
 Raça: {self._raca}
+Classe: {self._classe}
 Idade: {self._idade}
 Altura: {self.altura}
 Peso: {self.peso}
-Genero: {self.genero}'''
+Genero: {self.genero}
+**Poder de Raça**
+{self.poder_de_raca}'''
         return personagem
 
 

@@ -1,5 +1,4 @@
 from abc import ABCMeta, abstractmethod
-import json
 
 
 class Mascara:
@@ -11,15 +10,14 @@ class Mascara:
 
 
 class RealizaVerificacao:
-    def __init__(self, raca, altura, classe):
+    def __init__(self, raca, altura):
         self._raca = raca
         self.altura = altura
-        self.classe = classe.title()
 
         self.verifica()
 
     def verifica(self):
-        verificadores = [VerificaAltura, VerificaClasse]
+        verificadores = [VerificaAltura, VerificaRaca]
 
         for verificador in verificadores:
             verificador.verifica(self)
@@ -35,11 +33,7 @@ class VerificaAltura(Mascara):
             raise Exception('Um Gigante ou Anão não pode ter menos de 1.60 de altura')
 
 
-class VerificaClasse(Mascara):
+class VerificaRaca(Mascara):
 
     def verifica(self):
         pass
-
-
-if __name__ == '__main__':
-    RealizaVerificacao('Gigante', 1.80, 'cavaleiro')

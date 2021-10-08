@@ -1,5 +1,5 @@
 from main import Personagem
-persona = Personagem('Jorge', 41, 1.90, '71 kg', 'Masculino', 'Cavaleiro Andante')
+persona = Personagem('Jorge', 'Humano', 41, 1.90, '71 kg', 'Masculino', 'Cavaleiro Andante')
 print(persona)
 print('****************')
 print(persona.atributos)

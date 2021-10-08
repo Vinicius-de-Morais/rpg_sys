@@ -1,18 +1,21 @@
 ******************* 
 Nome: Jorge
+Raça: None
 Classe: Cavaleiro Andante
-Raça: Desconhecida
 Idade: 41
 Altura: 1.9
 Peso: 71 kg
 Genero: Masculino
+**Poder de Raça**
+Compaixão de Narcissus: Cura feridas letais de aliados. Só
+pode ser usado uma vez a cada 5 dias
 *******************
 Força: 6
 Destreza: 2
-Inteligência: 0
+Inteligência: 1
 Fé: 0
 Sabedoria: 0
 Resistência: 2
-Carisma: 2
+Carisma: 3
 Sorte: 0 
 *******************
