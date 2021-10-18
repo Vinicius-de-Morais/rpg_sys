@@ -29,7 +29,7 @@ class VerificaAltura(Mascara):
         if type(self.altura) != float:
             raise ValueError('Altura deve ser declarada como um float. EX: 1.70')
 
-        elif self.altura < 1.60 and self._raca == 'Gigante' or self._raca == 'Anão':
+        elif self.altura < 1.60 and self._raca == 'Gigante' or self.altura < 1.60 and self._raca == 'Anão':
             raise Exception('Um Gigante ou Anão não pode ter menos de 1.60 de altura')
 
 

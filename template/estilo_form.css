@@ -1,0 +1,50 @@
+
+body{
+    font-family: 'IM Fell English SC', serif;
+    background-image: url("https://wallpaperaccess.com/full/1588509.jpg") ;
+    background-position: center top;
+    background-size: cover;
+    font-size: 1.3em;
+    color: #F0F8FF;
+    margin-left: 40%;
+    margin-top: 0.1%;
+    justify-content: center;
+    display: block;
+    }
+
+label{
+    margin-left: -1.6%;
+    margin-top: 1.6%;
+    display: inline-block;
+}
+input[type="text"], input[type="number"] {
+    margin-left: 5%;
+    margin-top: -1.6%;
+    size: 10em
+    padding: 0.01em;
+    border: 0.2px solid;
+    box-shadow: 2px 2px 2px rgba(0,0,0.2);
+    position: absolute;
+    display: block;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #F8F8FF ;
+    border: 0;
+    margin-bottom: 1em;
+    border-radius: 8px
+    color: #2c4762;
+    padding: 0.2em 0.4em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 1px rgb(0,0,0,0.2);
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.botao:hover{
+    background: #18334e;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
