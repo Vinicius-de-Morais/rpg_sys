@@ -17,7 +17,7 @@ label{
     margin-top: 1.6%;
     display: inline-block;
 }
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], select {
     margin-left: 5%;
     margin-top: -1.6%;
     size: 10em

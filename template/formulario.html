@@ -9,25 +9,22 @@
         </style>
         <title>RPG</title>
     </head>
+
     <body>
-        <form action="{{ url_for('index') }}" method="post">
+        <form action="{{ url_for('index') }}" method="POST">
             <div class="campos">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome"><br>
-                <label for="raca">Raça</label>
-                <input type="text" id="raca" name="raca"><br>
-                <label for="idade">Idade</label>
-                <input type="number" id="idade" name="idade"><br>
-                <label for="altura">Altura</label>
-                <input type="text" id="altura" name="altura"><br>
-                <label for="peso">Peso</label>
-                <input type="number" id="peso" name="peso"><br>
-                <label for="genero">Genero</label>
-                <input type="text" id="genero" name="genero"><br>
-                <label for="classe">Classe</label>
-                <input type="text" id="classe" name="classe"><br>
+                {{ form.csrf_token }}
+                {{form.nome.label}} {{form.nome}}<br>
+                {{form.raca.label}} {{form.raca}}<br>
+                {{form.altura.label}} {{form.altura}}<br>
+                {{form.idade.label}} {{form.idade}}<br>
+                {{form.peso.label}} {{form.peso}}<br>
+                {{form.genero.label}} {{form.genero}}<br>
+                {{form.classe.label}} {{form.classe}}<br>
             </div>
-            <button type="submit", class="botao">Finalizar</button>
+            <button type="submit" class="botao">Finalizar</button>
         </form>
     </body>
 </html>
+
+<!--<input type="text" id="classe" name="classe"><br>-->

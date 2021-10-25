@@ -12,15 +12,16 @@
 </head>
 <body>
        <div class="identidade">
-            <p>Nome: {{ nome }}  |  Raça: {{ raca }}  |  Genero: {{ genero }}</p>
-            <p>Idade: {{ idade }}  |  Altura: {{ altura }}  |  Peso: {{ peso }}</p>
-            <p>Classe: {{ classe }}</p>
+            <p>Nome: {{ personagem._nome }}  |  Genero: {{ personagem.genero }}  |  Idade: {{ personagem._idade }}  |  Altura: {{ personagem.altura }}  |  Peso: {{ personagem.peso }}</p>
+            <p></p>
+            <p>Classe: {{ personagem._classe }}  |  Raça: {{ personagem._raca }}</p>
+            <p>Poder de Raça: {{ personagem.poder_de_raca }}</p>
         </div>
 
         <div class="atributos">
             <p>Atributos:</p>
             {% for atributo in personagem.atributos.splitlines() %}
-                <p>{{ atributo }} <button type="button" class="botao">+</button> <button type="button" class="botao">-</button></p>
+                <p>{{ atributo }} <button type="button" class="botao" value="{{ atributo }}" name="adiciona">+</button> <button type="button" class="botao" value="{{ atributo }}" name="diminui">-</button></p>
             {% endfor %}
         </div>
 </body>
