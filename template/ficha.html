@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo_ficha.css')}}" media="screen" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    </style>
+    <title>Ficha</title>
+
+</head>
+<body>
+       <div class="identidade">
+            <p>Nome: {{ personagem._nome }}  |  Genero: {{ personagem.genero }}  |  Idade: {{ personagem._idade }}  |  Altura: {{ personagem.altura }}  |  Peso: {{ personagem.peso }}</p>
+            <p></p>
+            <p>Classe: {{ personagem._classe }}  |  Raça: {{ personagem._raca }}</p>
+            <p>Poder de Raça: {{ personagem.poder_de_raca }}</p>
+        </div>
+
+        <div class="atributos">
+            <p>Atributos:</p>
+            {% for atributo in personagem.atributos.splitlines() %}
+                <p>{{ atributo }} <button type="button" class="botao" value="{{ atributo }}" name="adiciona">+</button> <button type="button" class="botao" value="{{ atributo }}" name="diminui">-</button></p>
+            {% endfor %}
+        </div>
+</body>
+</html>

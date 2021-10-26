@@ -17,6 +17,7 @@ class Mascara:
         pass
 
 
+
 class DefineRaca:
     def __init__(self, raca):
 
@@ -28,12 +29,17 @@ class DefineRaca:
             if raca == nome_da_raca:
                 self.raca_definida = raca_definida
 
+
     def define(self, objeto):
         try:
             self.raca_definida(objeto).modifica_atributos()
+            return self.raca_definida.__name__
         except:
             raise ValueError('Raça Inválida')
 
+    @staticmethod
+    def racas():
+        return ['Humano', 'Lohikaarme', 'Gigante', 'Anão', 'Felnari', 'Khevari']
 
 class Humano(Mascara):
 
