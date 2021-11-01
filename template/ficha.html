@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<html lang="pt" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,24 @@
 
         <div class="atributos">
             <p>Atributos:</p>
-            {% for atributo in personagem.atributos.splitlines() %}
-                <p>{{ atributo }} <button type="button" class="botao" value="{{ atributo }}" name="adiciona">+</button> <button type="button" class="botao" value="{{ atributo }}" name="diminui">-</button></p>
+            {% for atributo in personagem._atributos.items() %}
+                <p>{{ atributo[0] }} <label id="{{ atributo[0] }}">{{ atributo[1] }}</label> <button type="button" class="botao" id="botao" onclick="aumenta('{{ atributo[0] }}')">+</button> <button type="button" class="botao"  onclick="diminui('{{ atributo[0] }}')">-</button></p>
             {% endfor %}
         </div>
 </body>
+
+<script>
+function aumenta(id) {
+  var x = document.getElementById(id);
+  var valor = parseInt(x.innerHTML,10) + 1;
+  x.innerHTML = valor;
+  }
+
+function diminui(id) {
+  var x = document.getElementById(id);
+  var valor = parseInt(x.innerHTML,10) - 1;
+  x.innerHTML = valor;
+  }
+</script>
+
 </html>
