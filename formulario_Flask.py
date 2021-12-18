@@ -1,20 +1,11 @@
 from flask import Flask, render_template, request
-from main import Personagem
+from main import Personagem, Atributos
 from raças import DefineRaca
-import json
 from flask_wtf import FlaskForm
 from wtforms.fields import SelectField, StringField, FloatField
 
 app = Flask('__name__', template_folder='template', static_folder='template')
 app.config['SECRET_KEY'] = 'vinicius'
-
-
-def retorna_classes():
-    caminho = 'classes.json'
-    with open(caminho, 'r', encoding='UTF-8') as arquivo:
-        arquivo = json.load(arquivo)
-        classes = [item for classe in arquivo for item in list(classe.keys())]
-    return classes
 
 
 class Form(FlaskForm):
@@ -24,7 +15,7 @@ class Form(FlaskForm):
     altura = FloatField('Altura')
     peso = StringField('Peso')
     genero = StringField('Genero')
-    classe = SelectField('Classe', choices=retorna_classes())
+    classe = SelectField('Classe', choices=Atributos.retorna_classes())
 
 
 @app.route('/', methods=['GET', 'POST'])

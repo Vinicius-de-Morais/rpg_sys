@@ -2,6 +2,7 @@ import json
 from raças import DefineRaca
 from verificadores import RealizaVerificacao
 
+
 class Personagem:
     def __init__(self, nome, raca, idade, altura, peso, genero, classe):
         if RealizaVerificacao(raca, altura):
@@ -43,7 +44,6 @@ Genero: {self.genero}
 {self.poder_de_raca}'''
         return personagem
 
-
     def salva_ficha(self):
 
         caminho = f'{self._nome}.txt'
@@ -73,3 +73,11 @@ class Atributos:
                 return atributo
         except:
             raise TypeError('Classe Invalida')
+
+    @staticmethod
+    def retorna_classes():
+        caminho = 'classes.json'
+        with open(caminho, 'r', encoding='UTF-8') as arquivo:
+            arquivo = json.load(arquivo)
+            classes = [item for classe in arquivo for item in list(classe.keys())]
+        return classes
