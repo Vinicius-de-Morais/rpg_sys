@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Planewalker';
+    src: url('Planewalker.otf') format('opentype');
+}
+.row.content {height: 1500px}
+body{
+    font-family: 'Planewalker' !important;
+    background-color: #2c4762 !important;
+}
+.jumbotron {
+    background-color: rgba(0, 0, 0, .1);
+    max-height: 40vh;
+    overflow-y: hidden;
+    width: 100%;
+}
+div[id='textos']{
+    color: #F8F8FF;
+    left: 5%;
+    font-size: 1.4em;
+}
+.sidenav{
+  background-color: #f1f1f1;
+  height: 170px;
+  border-radius: 4px;
+}
+
+/* codigo copiado sry */
+.scroll {
+    color: #fff;
+    margin-top: 100px
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 15px;
+    background-color: hsla(5, 76%, 62%, .8)
+}
+
+.js .cd-top--fade-out {
+    opacity: .5
+}
+
+.js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1
+}
+
+.js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, background-color .3s
+}
+.cd-top {
+    position: fixed;
+    bottom: 20px;
+    bottom: var(--cd-back-to-top-margin);
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+    background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+    background-color: hsla(5, 76%, 62%, .8);
+    background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+}
+/* acaba aqui o codigo copiado D: */
+h3#cavaleiroNobre{
+    color: #a70909;
+}
+h3#cavaleiroAndante{
+    color: #019a2b;
+}
+h3#cavaleiroSelo{
+    color: cyan;
+}
+h3#mercenario{
+    color: #0bff43;
+}
+h3#ladino{
+    color: magenta;
+}
+h3#caçador{
+    color: #ed6713;
+}
+h3#bardo{
+    color: violet;
+}
+.titulo{
+  color: black;
+}
+.destaques{
+  color: #6cb2ef;
+}
+.magias{
+  color:#f6f473
+}
+h3#apostoloHelle{
+  color:#cc9be9
+}
+h3#apostoloThemum{
+  color: #ff5a5a
+}
+h3#enviadoAnhan{
+  color:#ff8500
+}
+footer {
+    font-family: monospace;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 5px;
+
+}

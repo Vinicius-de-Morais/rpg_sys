@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo_form.css')}}" media="screen" />
+
+
         <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
         </style>
@@ -12,17 +14,22 @@
 
     <body>
         <form action="{{ url_for('index') }}" method="POST">
-            <div class="campos">
-                {{ form.csrf_token }}
-                {{form.nome.label}} {{form.nome}}<br>
-                {{form.raca.label}} {{form.raca}}<br>
-                {{form.altura.label}} {{form.altura}}<br>
-                {{form.idade.label}} {{form.idade}}<br>
-                {{form.peso.label}} {{form.peso}}<br>
-                {{form.genero.label}} {{form.genero}}<br>
-                {{form.classe.label}} {{form.classe}}<br>
+            <div class="container-fluid">
+                <div class="jumbotron">
+                    {{ form.csrf_token }}
+                    {{form.nome.label}} {{form.nome}}<br>
+                    {{form.raca.label}} {{form.raca}}<br>
+                    {{form.altura.label}} {{form.altura}}<br>
+                    {{form.idade.label}} {{form.idade}}<br>
+                    {{form.peso.label}} {{form.peso}}<br>
+                    {{form.classe.label}} {{form.classe}}<br>
+                    {{form.genero.label}} {{form.genero}}<br>
+                </div>
+                <button type="submit" class="botao">Finalizar</button>
+                <a href="/informacoes">
+                <button type="button" class="botao" id="informacoes">Informações</button>
+                </a>
             </div>
-            <button type="submit" class="botao">Finalizar</button>
         </form>
     </body>
 </html>

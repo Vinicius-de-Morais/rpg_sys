@@ -15,6 +15,10 @@ class Personagem:
             self._atributos = Atributos().define_atributos(classe)
             self.poder_de_raca = None
             self._raca = DefineRaca(raca).define(self)
+            self.bencao = self._atributos['Benção']
+            self.treinado = ', '.join(self._atributos['Treinado'])
+            self.itens = self._atributos['Itens']
+            self.atributos_lista = list(self._atributos.items())[:8]
 
     @property
     def atributos(self):

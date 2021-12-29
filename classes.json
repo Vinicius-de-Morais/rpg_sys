@@ -7,66 +7,140 @@
         "Sabedoria": 0,
         "Resistência": 0,
         "Carisma": 0,
-        "Sorte": 0 
+        "Sorte": 0,
+        "Benção": "",
+        "Treinado": [],
+        "Itens": []
     }},
-    {"Cavaleiro Andante":{
-        "Força": 3,
+    {"Cavaleiro Nobre":{
+        "Força": 2,
         "Destreza": 2,
         "Inteligência": 0,
         "Fé": 0,
         "Sabedoria": 0,
-        "Resistência": 2,
-        "Carisma": 2,
-        "Sorte": 0
+        "Resistência": 3,
+        "Carisma": 1,
+        "Sorte": 0,
+        "Benção": "Direito divino: Por conta de sua reputação e do sangue que corre em suas veias, o cavaleiro nobre tem direito a um pedido voltado a membros da nobreza. (Só pode ser usado 3 vezes no jogo)",
+        "Treinado": ["Espada e escudo", "Espada Longa", "Lança", "Jousting"],
+        "Itens": ["Escudo pipa feito de carvalho reforçado que estampa o símbolo de sua casa", "Espada de aço", "Armadura completa", "Cavalo"]
+
     }},
-    {"Cavaleiro":{ 
-        "Força": 2,
+    {"Cavaleiro Andante":{
+        "Força": 3,
         "Destreza": 1,
-        "Inteligência": 1,
+        "Inteligência": 0,
+        "Fé": 0,
+        "Sabedoria": 1,
+        "Resistência": 2,
+        "Carisma": 0,
+        "Sorte": 1,
+        "Benção": "Saco de pancada: Provoca todos os inimigos por um único turno (Pode ser usado a cada 2 encontros).",
+        "Treinado": ["Espada longa", "Machado e escudo", "Espada grande"],
+        "Itens": ["Espada longa", "Armadura com peças misturadas", "Cavalo"]
+    }},
+    {"Cavaleiro do Selo":{
+        "Força": 3,
+        "Destreza": 0,
+        "Inteligência": 0,
+        "Fé": 3,
+        "Sabedoria": 0,
+        "Resistência": 2,
+        "Carisma": 0,
+        "Sorte": 0,
+        "Benção": "Força de Gladio: Dá mais 2 em resistência para apenas um membro do grupo, por único turno. (Pode ser usado a cada 3 encontros).",
+        "Treinado": ["Maça e escudo", "Polearms", "Martelo"],
+        "Itens": ["Morning Star", "Heater shield de Metal", "Armadura de qualidade normal"]
+    }},
+    {"Mercenário":{
+        "Força": 2,
+        "Destreza": 3,
+        "Inteligência": 0,
+        "Fé": 0,
+        "Sabedoria": 1,
+        "Resistência": 1,
+        "Carisma": 0,
+        "Sorte": 0,
+        "Benção": "Jogo sujo: Dispara um dardo da sua besta de pulso. (Necessário recarregar para usar novamente).",
+        "Treinado": ["Espada", "Dual Wielding", "Lâminas curtas"],
+        "Itens": ["Espada", "Adaga", "Armadura brigantina"]
+    }},
+    {"Ladino":{
+        "Força": 0,
+        "Destreza": 3,
+        "Inteligência": 2,
         "Fé": 0,
         "Sabedoria": 0,
-        "Resistência": 3,
-        "Carisma": 3,
-        "Sorte": 0
-    }},
-    {"Alquimista":{
-        "Força": 0,
-        "Destreza": 1,
-        "Inteligência": 3,
-        "Fé": 0,
-        "Sabedoria": 2,
-        "Resistência": 1,
-        "Carisma": 3,
-        "Sorte": 0
+        "Resistência": 0,
+        "Carisma": 0,
+        "Sorte": 3,
+        "Benção": "Dedos leves: Tem direito a um furto garantido de um objeto que caiba no bolso. (Pode ser usado uma vez por sessão).",
+        "Treinado": ["Furto", "Furtividade"],
+        "Itens": ["Adagas", "Sacola de dados", "Zarabatana"]
     }},
     {"Bardo":{
         "Força": 0,
         "Destreza": 0,
-        "Inteligência": 1,
+        "Inteligência": 0,
         "Fé": 0,
         "Sabedoria": 1,
         "Resistência": 0,
         "Carisma": 5,
-        "Sorte": 3
+        "Sorte": 2,
+        "Benção": "Levantar ânimos: Dá um 1 ponto a mais no dado para todos os membros do grupo por dois turnos. (Pode ser usado a cada 3 encontros). ",
+        "Treinado": ["Cantar", "Musicalidade", "SEXO"],
+        "Itens": ["Instrumento a sua escolha"]
     }},
-    {"Nobre":{
+    {"Caçador":{
         "Força": 1,
-        "Destreza": 1,
+        "Destreza": 3,
         "Inteligência": 1,
-        "Fé": 1,
-        "Sabedoria": 1,
-        "Resistência": 1,
-        "Carisma": 1,
-        "Sorte": 1
+        "Fé": 0,
+        "Sabedoria": 2,
+        "Resistência": 0,
+        "Carisma": 0,
+        "Sorte": 1,
+        "Benção": "Conhecimento de antigo: Consegue rastrear qualquer animal, desde que o rastro ainda esteja fresco.",
+        "Treinado": ["Arco e flecha", "Armadilhas"],
+        "Itens": ["Arco longo", "Aljava com 15 flechas", "Adaga"]
     }},
-    {"Oráculo":{
+    {"Apóstolo de Helle":{
         "Força": 0,
         "Destreza": 0,
-        "Inteligência": 1,
-        "Fé": 5,
-        "Sabedoria": 3,
-        "Resistência": 1,
+        "Inteligência": 3,
+        "Fé": 3,
+        "Sabedoria": 2,
+        "Resistência": 0,
         "Carisma": 0,
-        "Sorte": 0
+        "Sorte": 0,
+        "Benção": "Apóstolos de Helle possuem um contador de ALMA com limite 5. O contador serve como a fonte de poder do fiel e ele pode partir, ou sacrificar partes de sua própria alma para alcançar seus objetivos. ",
+        "Treinado": ["Espinho negro", "Marionetes"],
+        "Itens": []
+    }},
+    {"Apóstolo de Themum":{
+        "Força": 0,
+        "Destreza": 0,
+        "Inteligência": 3,
+        "Fé": 2,
+        "Sabedoria": 1,
+        "Resistência": 0,
+        "Carisma": 0,
+        "Sorte": 0,
+        "Benção": "MENTE e HUMANIDADE (Para saber mais vá para a página com as demais informações da classe)",
+        "Treinado": ["Hemocinese", "Lâmina de sangue", "Fechar ferida", "Fervor carmesim", "Abraço Sanguine"],
+        "Itens": []
+    }},
+    {"Enviado Anhan":{
+        "Força": 0,
+        "Destreza": 0,
+        "Inteligência": 0,
+        "Fé": 5,
+        "Sabedoria": 0,
+        "Resistência": 1,
+        "Carisma": 2,
+        "Sorte": 0,
+        "Benção": "ESPIRITUALIDADE (Para saber mais vá para a página com as demais informações da classe)",
+        "Treinado": ["Mão de Narcissus", "Salvação dos enfermos", "Escudo dos fiéis", "Luz na escuridão"],
+        "Itens": []
     }}
 ]

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo_info.css')}}" media="screen" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+<div class="container-fluid">
+
+    <div class="jumbotron">
+        <h1 class="text-center">Informações sobre o RPG</h1>
+        <p class="text-center">Apenas um RPG para se divertir com os amigos :D</p>
+    </div>
+
+    <div class="row">
+
+        <div class="position-fixed">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 sidenav h-100">
+            <h4>Indice</h4>
+
+            <li><a href="#resumo">Resumo</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Classes
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#cavaleiroNobre">Cavaleiro Nobre</a></li>
+                    <li><a href="#cavaleiroAndante">Cavaleiro Andante</a></li>
+                    <li><a href="#cavaleiroSelo">Cavaleiro do Selo</a></li>
+                    <li><a href="#mercenario">Mercenário</a></li>
+                    <li><a href="#ladino">Ladino</a></li>
+                    <li><a href="#caçador">Caçador</a></li>
+                    <li><a href="#bardo">Bardo</a></li>
+                    <li><a href="#apostoloHelle">Apóstolo de Helle</a></li>
+                    <li><a href="#apostoloThemum">Apóstolo de Themum</a></li>
+                    <li><a href="#enviadoAnhan">Enviado de Anhan</a></li>
+                </ul>
+            </li>
+            <li><a href="#contato">Contato</a></li>
+        </div>
+        </div>
+
+        <div id="textos">
+            <div class="col-lg-9 col-md-9 col-sm-2" id="resumo">
+                <h1 class="titulo">Resumo:</h1>
+                <p>Esse é um RPG feito por mim e um amigo, apenas pra juntar a galera e jogar. A história e todo o
+                    sistema foram idealizada por ele, então desde já meus agradescimentos grande amigo. Enquanto isso
+                    eu decidi criar um site para facilitar a criação das classes e tornar as coias mais dinâmicas.
+                </p>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-2" id="classes">
+                <h1 class="titulo">Classes:</h1>
+                <h3 id="cavaleiroNobre">Cavaleiro Nobre:</h3> <p>Um cavaleiro nascido de uma casa pequena, ou
+                que ganhou o título de nobreza ao ser nomeado. Tratando-se de um
+                nobre, este cavaleiro possui armadura, espada e escudo de boa qualidade
+                e, obviamente, um cavalo. O cavaleiro é um protetor do povo, por isso,
+                é visto com bons olhares e recebido calorosamente por onde quer que
+                passe.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 2<br>
+                Destreza: 2<br>
+                Inteligência: 0<br>
+                Sabedoria: 0<br>
+                Fé: 0<br>
+                Resistência: 3<br>
+                Carisma: 1<br>
+                Sorte: 0<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Espada e escudo;
+                - Espada longa;
+                - Lança;
+                - Jousting.</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Direito divino: Por conta de sua reputação e do sangue que corre
+                em suas veias, o cavaleiro nobre tem direito a um pedido voltado a
+                membros da nobreza. (Só pode ser usado 3 vezes no jogo).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Escudo pipa feito de carvalho reforçado que estampa o símbolo de
+                sua casa;
+                - Espada de aço;
+                - Armadura completa;
+                - Cavalo.</p>
+
+                <h3 id="cavaleiroAndante">Cavaleiro Andante:</h3> <p>Um cavaleiro (geralmente nascido da plebe)
+                nomeado por outro cavaleiro, que percorre o continente em busca de
+                trabalhos para serem realizado e guerras para serem lutadas. Por
+                terem sangue de plebeu, cavaleiros andantes sempre ficam fora dos
+                holofotes, portanto, não espere ser recebido com flores e banquetes.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 3<br>
+                Destreza: 1<br>
+                Inteligência: 0<br>
+                Sabedoria: 1<br>
+                Fé: 0<br>
+                Resistência: 2<br>
+                Carisma: 0<br>
+                Sorte: 1<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Espada longa;
+                - Machado e escudo;
+                - Espada grande. </p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Saco de pancada: Provoca todos os inimigos por um único turno.
+                (Pode ser usado a cada 2 encontros).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Espada longa;
+                - Armadura com peças misturadas
+                - Cavalo.</p>
+
+                <h3 id="cavaleiroSelo">Cavaleiro do Selo:</h3> <p>Cavaleiro santificado e nomeado pela Fé.
+                Geralmente de descendência nobre, porém há exceções em que
+                um paskienen pode vir a ser nomeado. Tem como dever proteger a
+                integridade da Fé e, se necessário, partir para a guerra em nome
+                dos selos.</p>
+                <p>A Fé do Selo vem sido mal vista desde a Guerra do Cervo,
+                portanto, cavaleiros do selo possuem má fama.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 3<br>
+                Destreza: 0<br>
+                Inteligência: 0<br>
+                Sabedoria: 0<br>
+                Fé: 3<br>
+                Resistência: 2<br>
+                Carisma: 0<br>
+                Sorte:0 <br>
+                <b class="destaques">TREINADO EM:</b>
+                - Maça e escudo;
+                - Polearms;
+                - Martelo.</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Força de Gladio: Dá mais 2 em resistência para apenas um
+                membro do grupo, por único turno. (Pode ser usado a cada 3
+                encontros).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Morning star;
+                - Escudo aquecedor feito de metal, e que estampa o símbolo da
+                divindade escolhida pelo jogador;
+                - Armadura de qualidade normal.</p>
+
+                <h3 id="mercenario">Mercenário:</h3> <p>Também chamados de “espadas de aluguel”
+                mercenários vivem uma vida de realizar trabalhos sujos em troca de
+                moeda. Seja matar, cobrar ou ameaçar alguém, o mercenário o
+                fará...pelo preço certo. Essa prática de negócios pode vir a ser
+                lucrativa, porém vem com o preço de ser mal visto pelo povo
+                comum e a nobreza.</p>
+                <p>Um mercenário pode ser autônomo, ou fazer parte de alguma das
+                companhias mercenárias proeminentes em Kelgard, que
+                geralmente são quase totalmente compostas por paskienen, mas há
+                sempre espaço para humanos.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 2<br>
+                Destreza: 3<br>
+                Inteligência: 0<br>
+                Sabedoria: 1<br>
+                Fé:0 <br>
+                Resistência: 1<br>
+                Carisma: 0<br>
+                Sorte: 1<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Espada;
+                - Dual wielding;
+                - Lâminas curtas</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Jogo sujo: Dispara um dardo da sua besta de pulso. (Necessário
+                recarregar para usar novamente).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Espada;
+                - Adaga;
+                - Brigantina.</p>
+
+                <h3 id="ladino">Ladino:</h3> <p>Um indivíduo baixo que vive a vida de furtos, assaltos e
+                trapaças, ou seja, vive pela sua sorte. Sendo um plebe e um ladrão,
+                dificilmente um ladino será bem visto pelo povo, mas um bom ladino
+                consegue usar sua inteligência e engenhosidade para enganar até
+                mesmo os mais desconfiados.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 0<br>
+                Destreza: 3<br>
+                Inteligência: 2<br>
+                Sabedoria: 0<br>
+                Fé: 0<br>
+                Resistência: 0<br>
+                Carisma: 0<br>
+                Sorte: 3<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Furto;
+                - Furtividade;</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Dedos leves: Tem direito a um furto garantido de um objeto que
+                caiba no bolso. (Pode ser usado uma vez por sessão).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Adagas;
+                - Sacola de dados;
+                - Zarabatana.</p>
+
+                <h3 id="caçador">Caçador:</h3> <p>O bom caçador é experiente em rastrear, matar e limpar
+                suas presas. Fazendo tudo isso de forma sorrateira e inteligente
+                para não ser mandado à forca.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 1<br>
+                Destreza: 3<br>
+                Inteligência: 1<br>
+                Sabedoria: 2<br>
+                Fé: 0<br>
+                Resistência: 0<br>
+                Carisma: 0<br>
+                Sorte: 1<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Arco e flecha;
+                - Armadilhas.</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                - Conhecimento de antigo: Consegue rastrear qualquer animal,
+                desde que o rastro ainda esteja fresco.</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Arco longo;
+                - Aljava com 15 flechas;
+                - Adaga.</p>
+
+                <h3 id="bardo">Bardo:</h3> <p>Cantores de contos sobre amor, dragões e batalhas,
+                bardos são sempre bem vindos e procurados tanto pela nobreza,
+                quanto pelo povo comum a não ser que tenham cortejado a filha de
+                algum lorde.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 0<br>
+                Destreza: 0<br>
+                Inteligência: 0<br>
+                Sabedoria: 2<br>
+                Fé: 0<br>
+                Resistência: 0<br>
+                Carisma: 5<br>
+                Sorte: 1<br>
+                <b class="destaques">TREINADO EM:</b>
+                - Cantar;
+                - Musicalidade;
+                - SEXO.</p>
+                <p><b class="destaques">BENÇÃO:</b>
+                -Levantar ânimos: Dá um 1 ponto a mais no dado para todos os
+                membros do grupo por dois turnos. (Pode ser usado a cada 3
+                encontros).</p>
+                <p><b class="destaques">COMEÇA O JOGO COM:</b>
+                - Instrumento de escolha</p>
+
+                <h2>Magos:</h2>
+                <h3 id="apostoloHelle">Apóstolo de Helle</h3>
+                <p>Apóstolos de Helle são membros do Clero do Selo que são
+                designados a dominar as artes da magia divina, especificamente
+                voltadas ao controle das sombras. É somente reconhecido como
+                um indivíduo capaz de usar magia aquele que passa no teste de
+                Grim, que consiste em ter um acólito colocado numa sala
+                totalmente escura, com uma única vela acesa no seu centro. Este
+                acólito tem como objetivo apagar a vela utilizando apenas de sua
+                mente e seu controle sob as sombras.</p>
+                <p>Apóstolos de Helle utilizam do poder de sua própria alma para usar
+                milagres. Por isso, eventualmente abdicam de seus 5 sentidos se
+                escolherem o caminho da magia.</p>
+                <p>NOTA: Utilizar magia requer alguma reza, rito, ou ação que indique
+                contato com os poderes divinos e, até mesmo sacrifícios
+                envolvendo o usuário ou outras formas de vida.</p>
+                <p><b class="destaques">ATRIBUTOS:</b>
+                Força: 0<br>
+                Destreza: 0<br>
+                Inteligência: 3<br>
+                Sabedoria: 2<br>
+                Fé: 3<br>
+                Resistência: 0<br>
+                Carisma: 0<br>
+                Sorte: 0</p>
+                <p><b class="destaques">ALMA: </b>
+                Apóstolos de Helle possuem um contador de ALMA com limite 5.
+                O contador serve como a fonte de poder do fiel e ele pode partir,
+                ou sacrificar partes de sua própria alma para alcançar seus
+                objetivos.</p>
+                <p><b class="destaques">MILAGRES: </b></p>
+                <p><b class="magias">Marionetes:</b> Cadáveres não possuem almas. Por isso, é possível
+                um Apóstolo de Helle possuir e controlar um corpo, introduzindo
+                uma parte de sua própria alma nele.
+                Corpos reanimados não têm consciência própria, ou capacidade
+                de fala e sentimento, são apenas marionetes sob o controle do
+                Apóstolo.
+                Para reanimar um corpo é necessário ceder 1 ponto de ALMA e, a
+                cada ponto cedido, o Apóstolo cede um de seus sentidos.
+                Perdendo, em sequência, tato, audição, olfato, visão e paladar. Se
+                o Apóstolo ceder seu quinto e último ponto de alma ele entra em
+                um estado vegetativo, tornando-se uma casca vazia. Quando
+                nesse estado, caso sofrer danos deverá rolar um teste de
+                INTELIGÊNCIA ou RESISTÊNCIA e, se falhar no teste, pode vir a
+                perder o controle de uma de suas marionetes juntamente com um
+                dos seus cinco sentidos, permanentemente.</p>
+                <p>PRECE: Umbratio hoc unum.</p>
+                <p><b class="magias">DADOS DAS MARIONETES:</b> O corpo em si pode ter atributos
+                próprios dependendo a quem pertencia, porém sua rolagem pode
+                ser somada a FÉ do jogador.</p>
+                <p><b class="magias">Espinho negro</b>: Distorce a energia da alma de um corpo recém
+                caído, transformando-a em uma espécie de lança grotesca.
+                Contudo, o poder deste milagre se limita ao poder da alma em
+                questão, então nada de passar por armaduras.</p>
+                <p><b class="destaques">DADOS:</b> D10 para potência.
+                 D20 para precisão. Somado a FÉ.</p>
+                <p>PRECE: Peccatum tollan spine.</p>
+
+                <h3 id="apostoloThemum">Apóstolo de Themum</h3>
+                <p>Apóstolos de Themum são membros do Clero da Fé designados a
+                dominar as artes da magia divina, especificamente voltadas ao
+                controle do sangue. É somente reconhecido como um indivíduo
+                capaz de usar a magia aquele que passa no teste de Raz, cujo
+                acólito é trancafiado, faminto e sedento, dentro de uma sala com
+                um roedor dentro de um vidro. O acólito submetido a este teste tem
+                como objetivo matar o animal utilizando apenas de seu controle
+                sob o sangue.</p>
+                <p>Apóstolos de Themum utilizam de sua sanidade como fonte de
+                poder, além disso, magia de sangue é uma prática dolorosa para
+                o usuário. O fim de um apóstolo que segue usando a magia de
+                    sangue é a loucura.</p>
+                <p>NOTA: Utilizar magia requer alguma reza, rito, ou ação que
+                indique contato com os poderes divinos, e inclui sacrifícios
+                envolvendo o usuário ou outras formas de vida.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 0<br>
+                Destreza: 0<br>
+                Inteligência: 3<br>
+                Sabedoria: 1<br>
+                Fé: 2<br>
+                Resistência: 2<br>
+                Carisma: 0<br>
+                Sorte: 0</p>
+                <p><b class="destaques">MENTE e HUMANIDADE:</b>
+                Apóstolos de Themum possuem um contador de MENTE com
+                limite 10. Caso o contador alcance 0, um contador de
+                HUMANIDADE com limite 10 tomará seu lugar. Quando o
+                contador de HUMANIDADE estiver ativo, o Apóstolo deverá rolar
+                um D10 toda vez que realizar uma ação e, se falhar na rolagem,
+                pode ferir a si mesmo ou aliados. Obs: Todos os milagres ficam
+                mais fortes enquanto o contador HUMANIDADE estiver ativo.</p>
+                <p><b class="destaques">MANEIRAS DE RECUPERAR MENTE:</b></p>
+                <p>- Consumindo néctar de Meimendro.
+                Efeitos negativos: Alucinações, náusea e febre.</p>
+                <p>- Consumindo Leite de Centaurea (extrato de papoula).
+                Efeitos negativos: Alucinações e risco de convulsão se
+                consumido em alta quantidade.</p>
+                <p>- Sendo colocado para dormir à força.
+                Efeitos negativos: Você não pode fazer nada.
+                <p>- Inalando fumaça de Mandrágora.</p>
+                Efeitos negativos: Dorme/desmaia por um longo período.
+                <p>- Consumindo Hollower.
+                Efeitos negativos: Chance de criar dependência na droga.</p>
+                <p>OBS: O jogador terá de passar em um teste de RESISTÊNCIA
+                para checar a gravidade dos efeitos negativos.</p>
+                <p><b class="destaques">MILAGRES:</b></p>
+                <p><b class="magias">Hemocinese:</b> É a capacidade de controlar o sangue a sua volta,
+                desde que ele esteja exposto aos olhos do Apóstolo.
+                Alcance de 2m. Alcance de 4m se for HUMANIDADE.
+                CUSTO: 0-2 MENTE ou HUMANIDADE, dependendo da
+                complexidade da ação.
+                DADOS: D20. Somado a INTELIGÊNCIA.</p>
+                <p>PRECE: Sanguis hoc manus.</p>
+                <p><b class="magias">Lâmina de sangue:</b> Transforma sangue fresco em um projétil
+                cortante que se assemelha à uma lâmina.
+                Alcance de 4m. Alcance de 5m se for HUMANIDADE.
+                CUSTO: 2 MENTE ou HUMANIDADE.
+                <b class="destaques">DADOS</b>: D20. Somado a INTELIGÊNCIA.</p>
+                <p>PRECE: Cidite uh phalas.</p>
+                <p><b class="magias">Fechar ferida:</b> Usa de sangue muito fresco para curar a si mesmo
+                ou aliados.
+                CUSTO: 3 para mais de MENTE ou HUMANIDADE, de acordo
+                com a gravura do ferimento. PRECE: Narcissus sana
+                vulnera.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.</p>
+                <p><b class="destaques">MILAGRES APENAS ENQUANTO EM HUMANIDADE:</b><p>
+                <p><b class="magias">Fervor carmesim:</b> Esquenta um vaso sanguíneo de um adversário
+                fervendo-o por dentro.
+                Alcance de 1m.
+                CUSTO: 3 de HUMANIDADE.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.</p>
+                <p>PRECE: Tique ea omnia.</p>
+                <p><b class="magias">Abraço Sanguine:</b> Atrai o sangue do corpo de um adversário na
+                sua direção, fazendo que o líquido saia de suas veias em formato
+                de estacas.
+                Alcance 1m.
+                CUSTO: 5 de HUMANIDADE.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.</p>
+                <p>PRECE: Ut somnum Amplexus.</p>
+
+                <h3 id="enviadoAnhan">Enviado de Anhan</h3>
+                <p>Enviados de Anhan, são missionários do Secto de Algen, religião
+                que agora predomina em Miesten seguindo a queda da Fé do Selo.
+                Eles são bem recebidos em praticamente qualquer canto do
+                continente. Geralmente, os missionários tomam votos em nome da
+                sua devoção, como um voto de silêncio ou de não usar sapatos.</p>
+                <p><b class="destaques">ATRIBUTOS:</b><br>
+                Força: 0<br>
+                Destreza: 0<br>
+                Inteligência: 0<br>
+                Sabedoria: 0<br>
+                Fé: 5<br>
+                Resistência: 1<br>
+                Carisma: 2<br>
+                Sorte: 0</p>
+                <p><b class="destaques">ESPIRITUALIDADE</b></p>
+                <p>A magia portada por enviados de Anhan vem de sua fé e de seus
+                condutores sagrados, que geralmente são amuletos carregados
+                pelo pescoço dos missionários. O amuleto possui um contador de
+                ESPIRITUALIDADE de limite 6, que é reabastecido com o tempo.</p>
+                <p>Obs: Atos de devoção, como ficar de jejum e constante oração
+                fazem com que o amuleto recarregue mais rápido.</p>
+                <p><b class="destaques">TEMPO DE RECARGA: </b>
+                Com alta devoção: 1 dia, ou algumas horas.
+                Deixando-o recarregar por si próprio: 2 dias.</p>
+                <p><b class="destaques">MILAGRES:</b><p>
+                <p>NOTA: Além de cantar os ritos, é preciso estar segurando no
+                cristal de seu amuleto para que o milagre seja efetuado. No caso
+                dos Enviados de Anhan, eles tomam as dores e ferimentos
+                daqueles que curam.</p>
+                <p><b class="magias">Mão de Narcissus:</b> Cura os ferimentos de um aliado, o jogador não
+                pode curar ele mesmo.
+                Alcance de até 2m.
+                CUSTO: 1-5 de ESPIRITUALIDADE, dependendo da gravidade
+                do ferimento.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.</p>
+                <p>PRECE: Domine vitae sana.</p>
+                <p><b class="magias">Salvação dos enfermos:</b> Cura doenças e enfermidades graves, o
+                jogador não pode curar ele mesmo.
+                Obs: é necessário passar algum tempo rezando com quem está
+                sendo curado.
+                CUSTO: 3 de ESPIRITUALIDADE.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.<p>
+                <p>PRECE: Pater claudat aegritudine.</p>
+                <p><b class="magias">Escudo dos fiéis:</b> Tranquiliza um alvo, impedindo-o de atacar ou
+                tornando-o menos hostil. Caso esteja lidando um praticante de
+                magia, silencia suas palavras para que seu rito não seja completo,
+                assim impede que seu milagre/feitiço tome forma.
+                Alcance de 3m.
+                CUSTO: 2 de ESPIRITUALIDADE.
+                <b class="destaques">DADOS:</b> D20. Somado a FÉ.</p>
+                <p>PRECE: Silere língua anguis.</p>
+                <p><b class="magias">Luz na escuridão:</b> Emite luz do cristal de seu amuleto para
+                trazer um pouco de claridade a áreas escuras.
+                CUSTO: 0 de ESPIRITUALIDADE.</p>
+                <p>PRECE: Pater lux afferat</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="container-fluid" id="contato">
+    <p>Contato:</p>
+    <p>dev: Vínícius de Morais   Email: vmorais@gmail.com
+    <a href="mailto:vmorais@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
+        &emsp; Telefone: (43) 9 8484-9292 &emsp; GitHub: <a href="https://github.com/Vinicius-de-Morais" >Vinicius-de-Morais</a>
+    </p>
+</footer>
+
+</body>
+
+<script>
+$(document).ready(function() {
+$(window).scroll(function() {
+if ($(this).scrollTop() > 20) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut();
+}
+});
+
+$('#toTopBtn').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 1000);
+return false;
+});
+});
+</script>

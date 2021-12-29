@@ -17,13 +17,45 @@
             <p>Classe: {{ personagem._classe }}  |  Raça: {{ personagem._raca }}</p>
             <p>Poder de Raça: {{ personagem.poder_de_raca }}</p>
         </div>
+        <div class="bencao">
+            <p>Benção: {{ personagem.bencao }}</p>
+            <p>Treinado em: {{ personagem.treinado }}</p>
+        </div>
 
         <div class="atributos">
             <p>Atributos:</p>
-            {% for atributo in personagem._atributos.items() %}
+            {% for atributo in personagem.atributos_lista %}
                 <p>{{ atributo[0] }} <label id="{{ atributo[0] }}">{{ atributo[1] }}</label> <button type="button" class="botao" id="botao" onclick="aumenta('{{ atributo[0] }}')">+</button> <button type="button" class="botao"  onclick="diminui('{{ atributo[0] }}')">-</button></p>
             {% endfor %}
         </div>
+
+        <div class="itens">
+            <table id="itens_table">
+                <tr><span>Itens:</span></tr>
+                {% for item in personagem.itens %}
+                <tr>
+                    <td><input type="button" id="deletaBotao" value="X" onclick="deletaLinha(this, 'itens_table')"/></td>
+                    <th scope="row">{{  item }}</th>
+                </tr>
+                {% endfor %}
+                <td><input type="button" id="adicionaBotao" value="Add" onclick="novaLinha('itens_table', 'itemAdicional')"/>
+                <th><input type="text" id="itemAdicional" size="30"/></th>
+
+            </table>
+        </div>
+
+        <div class="bolsa">
+            <table id="bolsa">
+                <tr><span>Bolsa:</span></tr>
+                <tr>
+                <td>
+                    <input type="button" id="adicionaBotaoBolsa" value="Add" onclick="novaLinha('bolsa', 'itemAdicionalBolsa')"/>
+                <th><input type="text" id="itemAdicionalBolsa" size="30"/></th>
+
+                </tr>
+            </table>
+        </div>
+
 </body>
 
 <script>
@@ -38,6 +70,20 @@ function diminui(id) {
   var valor = parseInt(x.innerHTML,10) - 1;
   x.innerHTML = valor;
   }
+
+function deletaLinha(linha, id){
+    var i=linha.parentNode.parentNode.rowIndex;
+    document.getElementById(id).deleteRow(i);
+}
+
+function novaLinha(id_table, id_input){
+    var x=document.getElementById(id_table).insertRow(1);
+    var c1=x.insertCell(0);
+    var c2=x.insertCell(1);
+    c1.innerHTML='<td><input type="button" id="deletaBotao" value="X" onclick="deletaLinha(this,' + "'" + id_table + "'"+ ')"/></td>';
+    var texto= document.getElementById(id_input).value;
+    c2.innerHTML= texto;
+}
 </script>
 
 </html>

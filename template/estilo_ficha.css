@@ -3,18 +3,26 @@ body{
     background-color: #2c4762;
     font-size: 1.3em;
     color: #F0F8FF;
-
     justify-content: center;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 3px;
     }
 
 .identidade{
-    position: relative;
-    display: block;
+    margin-right: 30px;
+    position:relative;
+    float: left;
+
 }
 
 .atributos{
-    position: relative;
-    float:left
+    height: 450px;
+    width: 400px;
+    display:block;
+    position:;
+    float: right;
+
 }
 .botao{
     font-size: 19px;
@@ -26,7 +34,66 @@ body{
     text-shadow: 1px 1px 1px rgb(0,0,0,0.2);
 }
 .botao:hover{
-    background: #18334e;
+    background: #1e2e3e;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+.bencao{
+    width: 800px;
+    height: 180px;
+    float: left;
+
+}
+.itens{
+    color: #2c4762;
+    background-color: #0f2235;
+    width: 300px;
+    float: left;
+    position: static;
+}
+th{
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+    width: 300px;
+}
+table[id="bolsa"]{
+    font-family: 'Roboto Mono', monospace;
+    color: #2c4762;
+    background-color: #0f2235;
+    width: 300px;
+}
+td{
+    font-size: 1.1em;
+    width: 300px;
+    text-align: center; vertical-align: middle;
+    background-color: white;
+}
+span{
+    color: white;
+}
+.bolsa{
+    font-family: 'Roboto Mono', monospace;
+    color: #2c4762;
+    background-color: #0f2235;
+    width: 300px;
+    float: left;
+    position: static;
+}
+input[id='deletaBotao'], input[id='adicionaBotao'],
+input[id='adicionaBotaoBolsa']{
+    font-size: 15px;
+    font-weight: bold;
+    background: #F8F8FF;
+    color: #2c4762;
+    border-radius: 4px;
+    padding: 0.01em 0.2em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: 2x 2px 2px rgb(0,0,0,0.2);
+}
+input[id='deletaBotao']:hover, input[id='adicionaBotao']:hover,
+input[id='adicionaBotaoBolsa']:hover{
+
+    background: #1e2e3e;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
 }

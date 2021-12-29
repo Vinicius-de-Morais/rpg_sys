@@ -25,16 +25,22 @@ def index():
         nome = request.form.get('nome').title()
         raca = request.form.get('raca').capitalize()
         idade = request.form.get('idade')
-        altura = float(request.form.get('altura'))
+        altura = float(request.form.get('altura').replace(',', '.'))
         peso = request.form.get('peso')
         genero = request.form.get('genero')
         classe = request.form.get('classe')
 
         personagem = Personagem(nome, raca, idade, altura, peso, genero, classe)
 
-        return render_template('Ficha.html', personagem=personagem)
+        return render_template('ficha.html', personagem=personagem)
 
     return render_template('formulario.html', form=form)
 
 
-app.run()
+@app.route("/informacoes")
+def info():
+    return render_template('informacoes.html')
+
+
+if '__main__' == __name__:
+    app.run()

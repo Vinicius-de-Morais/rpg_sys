@@ -1,6 +1,6 @@
 ******************* 
 Nome: Jorge
-Raça: None
+Raça: Humano
 Classe: Cavaleiro Andante
 Idade: 41
 Altura: 1.9
@@ -11,11 +11,11 @@ Compaixão de Narcissus: Cura feridas letais de aliados. Só
 pode ser usado uma vez a cada 5 dias
 *******************
 Força: 6
-Destreza: 2
+Destreza: 1
 Inteligência: 1
 Fé: 0
-Sabedoria: 0
+Sabedoria: 1
 Resistência: 2
-Carisma: 3
-Sorte: 0 
+Carisma: 1
+Sorte: 1 
 *******************

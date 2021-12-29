@@ -1,12 +1,36 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+    label{
+        margin-left: -1.6%;
+        margin-top: 1.6%;
+        display: inline-block;
+    }
+    input[type="text"], input[type="number"], select {
+        margin-left: 5%;
+        margin-top: -1.6%;
+        size: 10em
+        padding: 0.01em;
+        border: 0.2px solid;
+        box-shadow: 2px 2px 2px rgba(0,0,0.2);
+        position: absolute;
+        display: block;
+    }
+}
 
 body{
     font-family: 'IM Fell English SC', serif;
     background-image: url("https://wallpaperaccess.com/full/1588509.jpg") ;
+    max-width:100%;height:auto;
     background-position: center top;
     background-size: cover;
     font-size: 1.3em;
     color: #F0F8FF;
-    margin-left: 40%;
+    margin-left: 42%;
     margin-top: 0.1%;
     justify-content: center;
     display: block;
@@ -16,16 +40,15 @@ label{
     margin-left: -1.6%;
     margin-top: 1.6%;
     display: inline-block;
+
 }
 input[type="text"], input[type="number"], select {
-    margin-left: 5%;
-    margin-top: -1.6%;
+    /* margin-left: 5%;
+    margin-top: -1.6%; */
     size: 10em
     padding: 0.01em;
     border: 0.2px solid;
     box-shadow: 2px 2px 2px rgba(0,0,0.2);
-    position: absolute;
-    display: block;
 }
 
 .botao{
@@ -47,4 +70,10 @@ input[type="text"], input[type="number"], select {
     background: #18334e;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
+}
+#informacoes{
+    font-size: 0.8em;
+    position: block;
+    top: 85%;
+    left: 50%;
 }

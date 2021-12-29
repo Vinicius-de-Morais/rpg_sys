@@ -21,7 +21,7 @@ class Mascara:
 class DefineRaca:
     def __init__(self, raca):
 
-        racas = [Humano, Lohikaarme, Gigante, Anão, Felnari, Khevari]
+        racas = [Humano, Paskienen, Lohikaarme, Gigante, Anão, Felnari, Khevari]
 
         for raca_definida in racas:
             nome_da_raca = raca_definida.__name__
@@ -39,18 +39,26 @@ class DefineRaca:
 
     @staticmethod
     def racas():
-        return ['Humano', 'Lohikaarme', 'Gigante', 'Anão', 'Felnari', 'Khevari']
+        return ['Humano', 'Paskienen']
+        # raças restantes no arquivo: Lohikaarme, Gigante, Anão, Felnari, Khevari
 
 class Humano(Mascara):
 
     def modifica_atributos(self):
-        self._atributos['Carisma'] += 1
-        self._atributos['Inteligência'] += 1
+        self._atributos['Carisma'] += 0
+        self._atributos['Inteligência'] += 0
 
     def define_poder_de_raca(self):
-        return '''Compaixão de Narcissus: Cura feridas letais de aliados. Só
-pode ser usado uma vez a cada 5 dias'''
+        return '''Diplocia: Testes de carisma são mais faceis'''
 
+
+class Paskienen(Mascara):
+    def modifica_atributos(self):
+        self._atributos['Carisma'] += 0
+        self._atributos['Inteligência'] += 0
+
+    def define_poder_de_raca(self):
+        return '''Marca de Athrelion: testes de intimidação são mais faceis'''
 
 class Lohikaarme(Mascara):
 
