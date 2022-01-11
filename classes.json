@@ -61,7 +61,7 @@
         "Resistência": 1,
         "Carisma": 0,
         "Sorte": 0,
-        "Benção": "Jogo sujo: Dispara um dardo da sua besta de pulso. (Necessário recarregar para usar novamente).",
+        "Benção": "Eu conheço um cara: Pode obter informações, ajuda ou passagem em lugares obscuros de cidades grandes. (Pode ser usado uma vez por sessão; a qualidade da ajuda será determinada por um D20 puro)",
         "Treinado": ["Espada", "Dual Wielding", "Lâminas curtas"],
         "Itens": ["Espada", "Adaga", "Armadura brigantina"]
     }},
@@ -87,7 +87,7 @@
         "Resistência": 0,
         "Carisma": 5,
         "Sorte": 2,
-        "Benção": "Levantar ânimos: Dá um 1 ponto a mais no dado para todos os membros do grupo por dois turnos. (Pode ser usado a cada 3 encontros). ",
+        "Benção": "Levantar ânimos, No seu ritmo, Conto de Bardo (Para saber mais vá para a página com as demais informações da classe)",
         "Treinado": ["Cantar", "Musicalidade", "SEXO"],
         "Itens": ["Instrumento a sua escolha"]
     }},
@@ -114,7 +114,7 @@
         "Carisma": 0,
         "Sorte": 0,
         "Benção": "Apóstolos de Helle possuem um contador de ALMA com limite 5. O contador serve como a fonte de poder do fiel e ele pode partir, ou sacrificar partes de sua própria alma para alcançar seus objetivos. ",
-        "Treinado": ["Espinho negro", "Marionetes"],
+        "Treinado": ["Marionetes"],
         "Itens": []
     }},
     {"Apóstolo de Themum":{
